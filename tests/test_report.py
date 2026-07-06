@@ -46,5 +46,24 @@ class RenderTests(unittest.TestCase):
         self.assertIn("Not Evaluated", self.md)
 
 
+class CatalogTests(unittest.TestCase):
+    def test_full_a_aa_set_present(self):
+        from vpat.catalog import CRITERIA
+        self.assertGreaterEqual(len(CRITERIA), 55)
+
+    def test_wcag_22_additions_present(self):
+        from vpat.catalog import CRITERIA
+        for cid in ("3.2.6", "3.3.7", "2.4.11", "2.5.7", "2.5.8", "3.3.8"):
+            self.assertIn(cid, CRITERIA)
+
+    def test_parsing_removed_in_wcag_22(self):
+        from vpat.catalog import CRITERIA
+        self.assertNotIn("4.1.1", CRITERIA)  # 4.1.1 Parsing was removed in WCAG 2.2
+
+    def test_only_a_and_aa_levels(self):
+        from vpat.catalog import CRITERIA
+        self.assertEqual({c["level"] for c in CRITERIA.values()}, {"A", "AA"})
+
+
 if __name__ == "__main__":
     unittest.main()

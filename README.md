@@ -22,10 +22,13 @@
 | Warn on catalog criteria that were not evaluated | ✅ works, tested |
 | Render a Markdown ACR covering every catalog criterion | ✅ works, tested |
 | **Fails closed** — refuses to render from invalid results | ✅ works |
-| **Full** WCAG 2.2 A/AA catalog (currently a 23-criterion subset), 508 mapping, HTML/OpenACR export | ⚠️ partial — [roadmap](#roadmap) |
+| **Complete WCAG 2.2 Level A + AA catalog (55 criteria)** | ✅ works, tested |
+| Section 508 mapping, HTML / OpenACR export | ⚠️ not built — [roadmap](#roadmap) |
 
-The criteria catalog is a **representative subset** (incl. the WCAG 2.2 additions 2.4.11 & 2.5.8),
-not the complete A/AA set. Extend `catalog.py` before using this for a real conformance claim.
+The catalog now covers the **complete WCAG 2.2 Level A + AA set (55 criteria)** — including the 2.2
+additions (Consistent Help, Redundant Entry, Focus Not Obscured, Dragging Movements, Target Size,
+Accessible Authentication) and with the removed 4.1.1 Parsing excluded. Section 508 mapping and
+HTML/OpenACR export are still to come.
 
 ## Why it exists
 
@@ -43,7 +46,7 @@ PYTHONPATH=src python -m vpat.cli report examples/results.json --product "Acme A
 
 ## Roadmap
 
-- [ ] Complete WCAG 2.2 A/AA catalog + AAA option
+- [ ] Optional Level AAA criteria
 - [ ] Section 508 / EN 301 549 mapping columns
 - [ ] HTML + OpenACR (machine-readable) export
 - [ ] Ingest results from the WCAG CI Gate + Shadow-DOM Auditor
