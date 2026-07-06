@@ -1,0 +1,18 @@
+[project]
+name = "technika11y-vpat-generator"
+version = "0.1.0a0"
+description = "Generates a WCAG 2.2 Accessibility Conformance Report (ACR / VPAT-style) from criteria results, and validates the inputs first."
+requires-python = ">=3.10"
+license = { text = "Apache-2.0" }
+keywords = ["accessibility", "a11y", "vpat", "acr", "wcag", "section-508", "compliance"]
+
+[project.scripts]
+vpat-generator = "vpat.cli:main"
+
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+packages = ["vpat"]

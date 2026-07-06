@@ -1,0 +1,7 @@
+[
+  { "id": "1.1.1", "conformance": "Supports", "remarks": "All images carry text alternatives." },
+  { "id": "1.4.3", "conformance": "Partially Supports", "remarks": "Neon badges fall below 4.5:1; fixed in high-contrast mode." },
+  { "id": "2.1.1", "conformance": "Supports", "remarks": "Fully keyboard operable." },
+  { "id": "2.4.7", "conformance": "Supports", "remarks": "Visible 3px focus outline throughout." },
+  { "id": "4.1.2", "conformance": "Supports", "remarks": "Native semantics; ARIA only where needed." }
+]
