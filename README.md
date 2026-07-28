@@ -28,6 +28,8 @@ PYTHONPATH=src python3 -m vpat.cli report examples/results.json
 | Validate results: unknown criterion, invalid conformance level | ✅ works, tested |
 | Warn on a claimed gap ("Partially/Does Not Support") with no remarks | ✅ works, tested |
 | Warn on catalog criteria that were not evaluated | ✅ works, tested |
+| **Derive the overall verdict** — "Conforms to WCAG 2.2 Level A / AA" — the way a reviewer reads it (one gap or unevaluated criterion sinks the claim) | ✅ works, tested |
+| Conformance summary rollup (counts per status, evaluated / total) | ✅ works, tested |
 | Render a Markdown ACR covering every catalog criterion | ✅ works, tested |
 | **Fails closed** — refuses to render from invalid results | ✅ works |
 | **Complete WCAG 2.2 Level A + AA catalog (55 criteria)** | ✅ works, tested |
