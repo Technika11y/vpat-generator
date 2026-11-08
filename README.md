@@ -31,6 +31,7 @@ PYTHONPATH=src python3 -m vpat.cli report examples/results.json
 | **Derive the overall verdict** — "Conforms to WCAG 2.2 Level A / AA" — the way a reviewer reads it (one gap or unevaluated criterion sinks the claim) | ✅ works, tested |
 | Conformance summary rollup (counts per status, evaluated / total) | ✅ works, tested |
 | Render a Markdown ACR covering every catalog criterion | ✅ works, tested |
+| Ingests `shadow-dom-auditor --vpat` output directly (scan → ACR) | ✅ works |
 | **Fails closed** — refuses to render from invalid results | ✅ works |
 | **Complete WCAG 2.2 Level A + AA catalog (55 criteria)** | ✅ works, tested |
 | Section 508 mapping, HTML / OpenACR export | ⚠️ not built — [roadmap](#roadmap) |
@@ -59,7 +60,8 @@ PYTHONPATH=src python -m vpat.cli report examples/results.json --product "Acme A
 - [ ] Optional Level AAA criteria
 - [ ] Section 508 / EN 301 549 mapping columns
 - [ ] HTML + OpenACR (machine-readable) export
-- [ ] Ingest results from the WCAG CI Gate + Shadow-DOM Auditor
+- [x] Ingest results from the Shadow-DOM Auditor (`--vpat`)
+- [ ] Ingest results from the WCAG CI Gate
 - [ ] SARIF output + the shared Technika11y CI gate
 
 ## License
